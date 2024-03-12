@@ -1,0 +1,25 @@
+{
+  "name": "my-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "typescript",
+          "typescriptreact",
+          "javascriptreact"
+        ],
+        "path": "./snippets/typescriptreact.json"
+      },
+      {
+        "language": [
+          "svelte",
+          "typescript"
+        ],
+        "path": "./snippets/sveltekit.json"
+      }
+    ]
+  }
+}

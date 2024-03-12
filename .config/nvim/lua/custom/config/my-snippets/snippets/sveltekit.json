@@ -1,0 +1,572 @@
+{
+  "Svelte component": {
+    "scope": "svelte",
+    "prefix": "kitComp",
+    "body": [
+      "<script>",
+      "\t$0",
+      "</script>",
+      "",
+      "<slot />",
+      "",
+      "<style>",
+      "",
+      "</style>"
+    ],
+    "description": "Basic Svelte component"
+  },
+  "Svelte component TS": {
+    "scope": "svelte",
+    "prefix": "kitCompTS",
+    "body": [
+      "<script lang=\"ts\">",
+      "\t$0",
+      "</script>",
+      "",
+      "<slot />",
+      "",
+      "<style>",
+      "",
+      "</style>"
+    ],
+    "description": "Svelte component with TypeScript"
+  },
+
+  "Svelte component with PostCSS": {
+    "scope": "svelte",
+    "prefix": "kitCompPost",
+    "body": [
+      "<script>",
+      "\t$0",
+      "</script>",
+      "",
+      "<slot />",
+      "",
+      "<style lang=\"postcss\">",
+      "",
+      "</style>"
+    ],
+    "description": "Svelte component with props"
+  },
+
+  "Svelte component with TypeScript and PostCSS": {
+    "scope": "svelte",
+    "prefix": "kitCompTSPost",
+    "body": [
+      "<script lang=\"ts\">",
+      "\t$0",
+      "</script>",
+      "",
+      "<slot />",
+      "",
+      "<style lang=\"postcss\">",
+      "",
+      "</style>"
+    ],
+    "description": "Svelte component with props"
+  },
+
+  "Script TS": {
+    "scope": "svelte,html",
+    "prefix": "kitScriptTS",
+    "body": ["<script lang=\"ts\">", "\t$0", "</script>", ""],
+    "description": "Script tag with TypeScript"
+  },
+
+  "Script context module": {
+    "scope": "svelte,html",
+    "prefix": "kitModule",
+    "body": ["<script context=\"module\">", "\t$0", "</script>", ""],
+    "description": "Script tag context module"
+  },
+
+  "Script context module TS": {
+    "scope": "svelte,html",
+    "prefix": "kitModuleTS",
+    "body": [
+      "<script context=\"module\" lang=\"ts\">",
+      "\t$0",
+      "</script>",
+      ""
+    ],
+    "description": "Script tag context module with TypeScript"
+  },
+
+  "Svelte Slot Prop": {
+    "scope": "svelte",
+    "prefix": "KitSlotProp",
+    "body": ["<slot ${1:prop}=\"${2:name}\">", "\t$0", "</slot>", ""],
+    "description": "Svelte slot with props"
+  },
+
+  "Style PostCSS": {
+    "scope": "svelte,html",
+    "prefix": "kitStylePost",
+    "body": ["<style lang=\"postcss\">", "\t$0", "</style>", ""],
+    "description": "Style tag with PostCSS"
+  },
+
+  "Svelte If Statement": {
+    "scope": "svelte",
+    "prefix": "kitIf",
+    "body": ["{#if ${1:expression}}", "\t$0", "{/if}", ""],
+    "description": "Svelte if statement"
+  },
+
+  "Svelte If Else Statement": {
+    "scope": "svelte",
+    "prefix": "kitIfElse",
+    "body": [
+      "{#if ${1:expression}}",
+      "\t$0",
+      "{:else if ${3:expression}}",
+      "\t",
+      "{:else}",
+      "\t",
+      "{/if}",
+      ""
+    ],
+    "description": "Svelte if else statement"
+  },
+
+  "Svelte Each": {
+    "scope": "svelte",
+    "prefix": "kitEach",
+    "body": ["{#each ${1:expression} as ${2:name}}", "\t$0", "{/each}", ""],
+    "description": "Svelte each"
+  },
+
+  "Svelte Each Index": {
+    "scope": "svelte",
+    "prefix": "kitEachIdx",
+    "body": [
+      "{#each ${1:expression} as ${2:name}, ${3:index}}",
+      "\t$0",
+      "{/each}",
+      ""
+    ],
+    "description": "Svelte each index"
+  },
+
+  "Svelte Each Else": {
+    "scope": "svelte",
+    "prefix": "kitEachElse",
+    "body": [
+      "{#each ${1:expression} as ${2:name}}",
+      "\t$0",
+      "{:else}",
+      "\t",
+      "{/each}",
+      ""
+    ],
+    "description": "Svelte each else"
+  },
+
+  "Svelte Await": {
+    "scope": "svelte",
+    "prefix": "kitAwait",
+    "body": [
+      "{#await ${1:expression}}",
+      "\t$0",
+      "{:then ${3:name}}",
+      "\t",
+      "{:catch ${5:error}}",
+      "\t",
+      "{/await}",
+      ""
+    ],
+    "description": "Svelte await"
+  },
+
+  "Svelte Key": {
+    "scope": "svelte",
+    "prefix": "kitKey",
+    "body": ["{#key ${1:expression}}", "\t$0", "{/key}", ""],
+    "description": "Svelte key"
+  },
+
+  "Svelte Component Directive": {
+    "scope": "svelte",
+    "prefix": "kit:component",
+    "body": ["<svelte:component this={${1:expression}}/>", ""],
+    "description": "Svelte component directive"
+  },
+
+  "Svelte Element Directive": {
+    "scope": "svelte",
+    "prefix": "kit:element",
+    "body": ["<svelte:element this={${1:expression}}/>", ""],
+    "description": "Svelte element directive"
+  },
+
+  "Svelte Window Directive": {
+    "scope": "svelte",
+    "prefix": "kit:window",
+    "body": ["<svelte:window />"],
+    "description": "Svelte window directive"
+  },
+
+  "Svelte Body Directive": {
+    "scope": "svelte",
+    "prefix": "kit:body",
+    "body": ["<svelte:body />"],
+    "description": "Svelte body directive"
+  },
+
+  "Svelte Head Directive": {
+    "scope": "svelte",
+    "prefix": "kit:head",
+    "body": [
+      "<svelte:head>",
+      "\t<title>${1:title}</title>",
+      "\t<meta name=\"description\" content=\"${2:content}\">",
+      "</svelte:head>",
+      ""
+    ],
+    "description": "Svelte head directive"
+  },
+
+  "Svelte Options Directive": {
+    "scope": "svelte",
+    "prefix": "kit:options",
+    "body": ["<svelte:options ${1:prop}=\"${2:value}\"/>", ""],
+    "description": "Svelte options directive"
+  },
+
+  "Svelte Fragment Directive": {
+    "scope": "svelte",
+    "prefix": "kit:fragment",
+    "body": [
+      "<svelte:fragment slot=\"${1:name}\"/>",
+      "\t$2",
+      "</svelte:fragment>",
+      ""
+    ],
+    "description": "Svelte fragment directive"
+  },
+
+  "Svelte onMount": {
+    "scope": "svelte",
+    "prefix": "kitOnMount",
+    "body": ["onMount(() => {", "\t$0", "});"],
+    "description": "Svelte onMount"
+  },
+
+  "Svelte beforeUpdate": {
+    "scope": "svelte",
+    "prefix": "kitBeforeUpdate",
+    "body": ["beforeUpdate(() => {", "\t$0", "});"],
+    "description": "Svelte beforeUpdate"
+  },
+
+  "Svelte afterUpdate": {
+    "scope": "svelte",
+    "prefix": "kitAfterUpdate",
+    "body": ["afterUpdate(() => {", "\t$0", "});"],
+    "description": "Svelte afterUpdate"
+  },
+
+  "Svelte onDestroy": {
+    "scope": "svelte",
+    "prefix": "kitOnDestroy",
+    "body": ["onDestroy(() => {", "\t$0", "});"],
+    "description": "Svelte onDestroy"
+  },
+
+  "Svelte Event Dispatcher": {
+    "scope": "svelte",
+    "prefix": "kitDispatcher",
+    "body": [
+      "import { createEventDispatcher } from 'svelte';",
+      "",
+      "const dispatch = createEventDispatcher();",
+      ""
+    ],
+    "description": "Svelte createEventDispatcher"
+  },
+
+  "SvelteKit Page Data": {
+    "scope": "svelte,javascript,typescript",
+    "prefix": "kitPageData",
+    "body": [
+      "/** @type {import('./\\$types').${1|PageData,LayoutData|}} */",
+      "\texport let data;",
+      "$0"
+    ],
+    "description": "SvelteKit page and layout data"
+  },
+
+  "SvelteKit Page Data TS": {
+    "scope": "svelte,typescript",
+    "prefix": "kitPageDataTS",
+    "body": [
+      "import type { ${1|PageData,LayoutData|} } from './\\$types';",
+      "",
+      "\texport let data: $1;",
+      "$0"
+    ],
+    "description": "SvelteKit page and layout data with TypeScript"
+  },
+
+  "SvelteKit Action Data": {
+    "scope": "svelte,javascript,typescript",
+    "prefix": "kitActionData",
+    "body": [
+      "/** @type {import('./\\$types').ActionData} */",
+      "export let form;",
+      "$0"
+    ],
+    "description": "SvelteKit action data data"
+  },
+
+  "SvelteKit Action Data TS": {
+    "scope": "svelte,typescript",
+    "prefix": "kitActionDataTS",
+    "body": [
+      "import type { ActionData } from './\\$types';",
+      "",
+      "export let form: ActionData;",
+      "$0"
+    ],
+    "description": "SvelteKit action data data with TypeScript"
+  },
+
+  "SvelteKit Page Data and Action Data": {
+    "scope": "svelte,javascript,typescript",
+    "prefix": "kitPageAction",
+    "body": [
+      "/** @type {import('./\\$types').PageData} */",
+      "export let data;",
+      "",
+      "/** @type {import('./\\$types').ActionData} */",
+      "export let form;",
+      "$0"
+    ],
+    "description": "SvelteKit page data and action data "
+  },
+
+  "SvelteKit Page Data and Action Data TS": {
+    "scope": "svelte,typescript",
+    "prefix": "kitPageActionTS",
+    "body": [
+      "import type { PageData, ActionData } from './\\$types';",
+      "",
+      "export let data: PageData;",
+      "export let form: ActionData",
+      "$0"
+    ],
+    "description": "SvelteKit page data and action data with TypeScript"
+  },
+
+  "Svelte Error": {
+    "scope": "svelte",
+    "prefix": "kitError",
+    "body": [
+      "<script>",
+      "\timport { page } from '$app/stores';",
+      "</script>",
+      "",
+      "<h1>{$page.status}: {$page.error.message}</h1>",
+      "$0"
+    ],
+    "description": "SvelteKit +error.svelte template"
+  },
+
+  "Svelte Load TS": {
+    "scope": "typescript",
+    "prefix": "kitLoadTS",
+    "body": [
+      "import type { ${1|PageLoad,PageServerLoad,LayoutLoad,LayoutServerLoad|} } from './\\$types';",
+      "",
+      "export const load = (async ({ $2 }) => {",
+      "\t$0",
+      "}) satisfies $1;",
+      ""
+    ],
+    "description": "SvelteKit load TS"
+  },
+
+  "SvelteKit Endpoint TS": {
+    "scope": "typescript",
+    "prefix": "kitEndpointTS",
+    "body": [
+      "import type { RequestHandler } from './\\$types';",
+      "",
+      "export const ${1|GET,POST,PATCH,PUT,DELETE|} = (({ $2 }) => {",
+      "\t$0",
+      "\treturn new Response()",
+      "}) satisfies RequestHandler;",
+      ""
+    ],
+    "description": "SvelteKit endpoint"
+  },
+
+  "SvelteKit Actions TS": {
+    "scope": "typescript",
+    "prefix": "kitActionsTS",
+    "body": [
+      "import type { Actions } from './\\$types';",
+      "",
+      "export const actions = {",
+      "\t${1:default}: async ({ $2 }) => {",
+      "\t\treturn $0;",
+      "\t}",
+      "} satisfies Actions;",
+      ""
+    ],
+    "description": "SvelteKit actions"
+  },
+
+  "SvelteKit Handle": {
+    "scope": "javascript,typescript",
+    "prefix": "kitHandle",
+    "body": [
+      "/** @type {import('@sveltejs/kit').Handle} */",
+      "export async function handle({ $1 }) {",
+      "\treturn $0;",
+      "}",
+      ""
+    ],
+    "description": "SvelteKit handle"
+  },
+
+  "SvelteKit Handle TS": {
+    "scope": "typescript",
+    "prefix": "kitHandleTS",
+    "body": [
+      "import type { Handle } from '@sveltejs/kit';",
+      "",
+      "export const handle = (async ({ $1 }) => {",
+      "\treturn $0;",
+      "}) satisfies Handle;",
+      ""
+    ],
+    "description": "SvelteKit handle with TypeScript"
+  },
+
+  "SvelteKit Fetch Handler": {
+    "scope": "javascript,typescript",
+    "prefix": "kitFetch",
+    "body": [
+      "/** @type {import('@sveltejs/kit').HandleFetch} */",
+      "export function handleFetch({ $1 }) {",
+      "\treturn $0;",
+      "}",
+      ""
+    ],
+    "description": "SvelteKit fetch handler"
+  },
+
+  "SvelteKit Fetch Handler TS": {
+    "scope": "typescript",
+    "prefix": "kitFetchTS",
+    "body": [
+      "import type { HandleFetch } from '@sveltejs/kit';",
+      "",
+      "export const handleFetch = (({ $1 }) => {",
+      "\treturn $0;",
+      "}) satisfies HandleFetch;",
+      ""
+    ],
+    "description": "SvelteKit fetch handler with TypeScript"
+  },
+
+  "SvelteKit Client Error": {
+    "scope": "javascript,typescript",
+    "prefix": "kitClientError",
+    "body": [
+      "/** @type {import('@sveltejs/kit').HandleClientError} */",
+      "export function handleError({ $1 }) {",
+      "\treturn $0;",
+      "}",
+      ""
+    ],
+    "description": "SvelteKit client error handler"
+  },
+
+  "SvelteKit Client Error TS": {
+    "scope": "typescript",
+    "prefix": "kitClientErrorTS",
+    "body": [
+      "import type { HandleClientError } from '@sveltejs/kit';",
+      "",
+      "export const handleError = (({ $1 }) => {",
+      "\treturn $0;",
+      "}) satisfies HandleClientError;",
+      ""
+    ],
+    "description": "SvelteKit client error handler with TypeScript"
+  },
+
+  "SvelteKit Server Error": {
+    "scope": "javascript,typescript",
+    "prefix": "kitServerError",
+    "body": [
+      "/** @type {import('@sveltejs/kit').HandleServerError} */",
+      "export function handleError({ $1 }) {",
+      "\treturn $0;",
+      "}",
+      ""
+    ],
+    "description": "SvelteKit server error handler"
+  },
+
+  "SvelteKit Server Error TS": {
+    "scope": "typescript",
+    "prefix": "kitServerErrorTS",
+    "body": [
+      "import type { HandleServerError } from '@sveltejs/kit';",
+      "",
+      "export const handleError = (({ $1 }) => {",
+      "\treturn $0;",
+      "}) satisfies HandleServerError;",
+      ""
+    ],
+    "description": "SvelteKit server error handler with TypeScript"
+  },
+
+  "SvelteKit ParamMatcherTS": {
+    "scope": "typescript",
+    "prefix": "kitParamMatcherTS",
+    "body": [
+      "import type { ParamMatcher } from '@sveltejs/kit';",
+      "",
+      "export const match = ((param) => {",
+      "\treturn $0;",
+      "}) satisfies ParamMatcher;",
+      ""
+    ],
+    "description": "SvelteKit params matcher with TypeScript"
+  },
+
+  "SvelteKit Enhanced Form": {
+    "scope": "svelte",
+    "prefix": "kitEnhancedForm",
+    "body": [
+      "<script lang='ts'>",
+      "\timport { enhance } from '\\$app/forms';",
+      "\timport type { SubmitFunction } from '\\$app/forms';",
+      "\timport type { ActionData, PageData } from './\\$types';",
+      "",
+      "\texport let data: PageData;",
+      "\texport let form: ActionData;",
+      "\t",
+      "\tconst submit: SubmitFunction = async () => {",
+      "\t\t// do something before the form is submitted",
+      "",
+      "\t\treturn async ({ update }) => {",
+      "\t\t\t// do something after the form is submitted",
+      "\t\t\t",
+      "\t\t\tawait update();",
+      "\t\t};",
+      "\t};",
+      "</script>",
+      "",
+      "<form action='?/' use:enhance={submit}>",
+      "\t<button type='submit'>Submit</button>",
+      "</form>",
+      ""
+    ],
+    "description": "SvelteKit enhanced form"
+  }
+}

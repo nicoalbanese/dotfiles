@@ -1,0 +1,23 @@
+return {
+  {
+    {
+      'akinsho/toggleterm.nvim',
+      version = '*',
+      opts = { --[[ things you want to change go here]]
+        open_mapping = [[<c-\>]],
+        hide_numbers = true, -- hide the number column in toggleterm
+        start_in_insert = true,
+        direction = 'float',
+        close_on_exit = true,
+        float_opts = {
+          border = 'curved',
+          winblend = 0,
+          highlights = {
+            border = 'Normal',
+            background = 'Normal',
+          },
+        },
+      },
+    },
+  },
+}
