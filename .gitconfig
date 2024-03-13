@@ -8,3 +8,5 @@
 	email = gcalbanese96@gmail.com
 [core]
 	editor = nvim
+[push]
+	autoSetupRemote = true
