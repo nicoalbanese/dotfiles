@@ -23,7 +23,7 @@ xcode-select --install
 2. Install the following packages
 
 ```
-brew install git stow node fd fzf ripgrep gh tmux neovim
+brew install git zsh stow node fd fzf ripgrep gh tmux neovim zsh-syntax-highlighting
 ```
 
 **Extras**:
@@ -51,7 +51,7 @@ brew install stow
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-git clone git@github.com/nicoalbanese/dotfiles.git
+git clone https://github.com/nicoalbanese/dotfiles.git
 cd dotfiles
 ```
 
