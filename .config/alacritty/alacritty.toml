@@ -37,3 +37,23 @@ draw_bold_text_with_bright_colors = true
 key = "Back"
 mods = "Command"
 chars = "\u0015"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001BB"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001BF"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command"
+chars = "\u0001"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command"
+chars = "\u0005"
