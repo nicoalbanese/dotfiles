@@ -32,6 +32,8 @@ brew install git zsh stow node fd fzf ripgrep gh tmux neovim zsh-syntax-highligh
 brew install bat stripe postgresql turso lazygit
 ```
 
+Install [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip) font
+
 ### Plain Install
 
 #### Git
