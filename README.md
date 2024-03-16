@@ -76,3 +76,7 @@ curl -fsSL https://bun.sh/install | bash
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+- turn off character suggestions key repeat
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
