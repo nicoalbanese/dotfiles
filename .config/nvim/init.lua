@@ -628,6 +628,39 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
     end,
 })
 
+
+vim.diagnostic.config({
+    virtual_text = false,
+    underline = true,
+})
+
+local function setup_custom_diagnostic_colors()
+    vim.cmd [[
+    highlight DiagnosticUnderlineError gui=italic,undercurl guisp=#ef4444
+    highlight DiagnosticUnnecessary guifg=#71717a gui=italic
+    " highlight DiagnosticUnderlineError guifg=#ef4444 gui=italic,undercurl guisp=#ef4444
+    " highlight DiagnosticUnderlineError gui=undercurl guisp=#dc2626
+    " highlight DiagnosticUnnecessary gui=italic guifg=#a3a3a3
+    " highlight DiagnosticUnderlineHint guibg=#00FF00
+  ]]
+end
+
+setup_custom_diagnostic_colors()
+
+-- Listen for the 'ColorScheme' event and apply customizations
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        -- Place your custom configuration here
+        -- Example: Change comment color
+        setup_custom_diagnostic_colors()
+    end
+})
+
+
+
+-- Customize underlines for warnings and errors
+
 -- vim.keymap.set('n', '<M-Up', '<cmd>:m+<CR>', { desc = 'move line' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
