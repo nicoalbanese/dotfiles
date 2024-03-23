@@ -146,3 +146,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/16/bin
