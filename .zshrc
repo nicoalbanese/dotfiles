@@ -104,7 +104,8 @@ alias pn=pnpm
 alias bn=bun
 alias bnx=bunx
 alias bnd="bun dev"
-alias cna="bunx create-next-app"
+alias cnap="pnpm create next-app"
+alias cnab="bunx create-next-app"
 
 alias pg="psql -U postgres"
 
@@ -113,6 +114,7 @@ alias tmux-config="nvim ~/.tmux.conf"
 alias tmux-source="tmux source ~/.tmux.conf"
 alias zsh-source="source ~/.zshrc"
 alias alac-config="nvim ~/.config/alacritty"
+alias t="tmux"
 
 
 alias pjd="cd ~/Developer/Projects"
@@ -148,3 +150,7 @@ esac
 # pnpm end
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/16/bin
+
+# fnm
+export PATH="/Users/nicoalbanese/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
