@@ -5,7 +5,7 @@
 	required = true
 [user]
 	name = Nico Albanese
-	email = gcalbanese96@gmail.com
+	email = nico.albanese@vercel.com
 [core]
 	editor = nvim
 [push]

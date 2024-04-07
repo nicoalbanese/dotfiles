@@ -290,6 +290,9 @@ require('telescope').setup {
                 ['<C-d>'] = false,
             },
         },
+        file_ignore_patterns = {
+            "package%-lock.json", "public", "assets", "pnpm%-lock.json"
+        }
     },
 }
 

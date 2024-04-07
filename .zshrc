@@ -131,7 +131,7 @@ function gca() {
 }
 
 export PATH=/opt/homebrew/bin:$PATH
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # bun completions
 [ -s "/Users/gioacchinoalbanese/.bun/_bun" ] && source "/Users/gioacchinoalbanese/.bun/_bun"
