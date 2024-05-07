@@ -1,0 +1,79 @@
+title = ""
+
+font-family = "MesloLGM Nerd Font Mono"
+font-style = Regular
+
+adjust-cell-height = 2 
+
+window-padding-x = 8
+window-padding-y = 8
+
+
+# cursor-color = #4DAFE3
+# cursor-text = black
+
+font-size = 16
+
+# Only on MacOS
+window-colorspace = "display-p3"
+
+font-thicken = true
+
+cursor-style = block
+cursor-style-blink = false
+
+shell-integration-features = no-cursor
+
+background = "#1E1E1E"
+foreground = "#DCDCDB" 
+
+# Clipboard settings
+clipboard-read = allow
+clipboard-write = allow
+
+macos-option-as-alt = true
+
+quit-after-last-window-closed = true
+
+# Keybindings
+keybind = super+left=text:\x01
+keybind = super+right=text:\x05
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
+keybind = super+backspace=text:\x15
+keybind = alt+backspace=text:\x1b\x7f
+# keybind = super+back=text:\u0015
+keybind = ctrl+h+shift=goto_split:left
+keybind = ctrl+j+shift=goto_split:bottom
+keybind = ctrl+l+shift=goto_split:right
+keybind = ctrl+k+shift=goto_split:top
+
+# THEME
+# black
+palette = 0=#1E1E1E 
+palette = 8=#666666
+# red 
+palette = 1=#F6645E
+palette = 9=#F6645E
+# green
+palette = 2=#00C58C
+palette = 10=#00C58C
+# yellow 
+palette = 3=#E8E60D
+palette = 11=#E8E60D
+# blue
+palette = 4=#67ADDE
+palette = 12=#67ADDE
+# magenta
+palette = 5=#DF89DE
+palette = 13=#DF89DE
+# cyan
+palette = 6=#2BC4E3
+palette = 14=#2BC4E3
+# white
+palette = 7=#EBEBEB
+palette = 15=#EBEBEB
+# indexed colors
+palette = 16=#15FCDB
+palette = 17=#72599D
+
