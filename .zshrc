@@ -1,9 +1,19 @@
+zmodload zsh/zprof
+
 # Load zsh completion system
 autoload -Uz compinit
-compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+ done
+compinit -C
+
+# autoload -U compinit
+# compinit -d ~/.zcompdump
+# autoload -U compaudit
+# compaudit -D
 
 # case insensitive completions
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+# zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Example aliases
 alias l="ls -lFh -a"
@@ -27,13 +37,16 @@ alias tmux-source="tmux source ~/.tmux.conf"
 alias zsh-config="nvim ~/.zshrc"
 alias zsh-source="source ~/.zshrc"
 alias alac-config="nvim ~/.config/alacritty"
+alias ghostty-config="nvim ~/.config/ghostty/config"
+alias ghostty-docs="nvim ~/.config/ghostty/docs"
 alias t="tmux"
 alias tat="tmux attach -t"
+alias tr="tmux rename"
+alias tls="tmux list-sessions"
 
 alias pjd="cd ~/Developer/Projects"
 alias lrd="cd ~/Developer/Learning"
 
-alias k="kirimase"
 alias lg="lazygit"
 
 alias nah="git reset --hard && git clean -df"
@@ -56,13 +69,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
-# pnpm
-export PNPM_HOME="/Users/gioacchinoalbanese/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/16/bin
 
@@ -72,3 +78,13 @@ eval "`fnm env`"
 
 # Starship
 eval "$(starship init zsh)"
+
+zprof
+
+# pnpm
+export PNPM_HOME="/Users/nicoalbanese/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
