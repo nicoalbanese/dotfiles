@@ -291,7 +291,7 @@ require('telescope').setup {
             },
         },
         file_ignore_patterns = {
-            "package%-lock.json", "public", "assets", "pnpm%-lock.json"
+            "package%-lock.json", "public", "assets", "pnpm%-lock.*"
         }
     },
 }
@@ -578,10 +578,8 @@ vim.keymap.set('n', '<leader>rf', '<cmd> :Format<CR>', { desc = '[R]un [F]ormat'
 vim.keymap.set('n', '<leader>|', '<cmd>:vsplit<CR>', { desc = 'split vertically' })
 vim.keymap.set('n', '<leader>-', '<cmd>:split<CR>', { desc = 'split horizonally' })
 
-vim.keymap.set('n', '<leader>ft', '<cmd>:InlineFoldToggle<CR>', { desc = 'inline [f]old [t]oggle' })
-
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'move line up' })
-vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv", { desc = 'Move line down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line down' })
 
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
@@ -598,6 +596,8 @@ vim.keymap.set("n", '<leader>tk', "<cmd>:colorscheme kanagawa-wave<CR>", { desc 
 vim.keymap.set("n", '<leader>tv', "<cmd>:colorscheme vscode<CR>", { desc = "[theme] Switch to VScode" })
 vim.api.nvim_set_keymap('n', '<leader>tt', ':colorscheme ', { noremap = true, desc = "toggle theme" })
 
+vim.keymap.set('n', '<leader>tf', '<cmd>:InlineFoldToggle<CR>', { desc = '[t]oggle inline [f]old' })
+
 vim.keymap.set("n", '<leader>gvd', "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>",
     { desc = "[nav] Go to definition in new split" })
 
@@ -605,6 +605,8 @@ vim.keymap.set("n", '<leader>gvd', "<cmd>vsplit | lua vim.lsp.buf.definition()<C
 
 vim.keymap.set("n", '<M-Up>', "<cmd>:vertical resize +2<CR>", { desc = "Adjust split right" })
 vim.keymap.set("n", '<M-Down>', "<cmd>:vertical resize -2<CR>", { desc = "Adjust split left" })
+
+vim.keymap.set("n", "<leader>qa", "<cmd>:qa!<CR>", { desc = "Quit All" })
 
 
 
@@ -622,14 +624,14 @@ discipline.cowboy()
 
 require("ts-error-translator").setup()
 
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
-    pattern = { '*.html', '*.tsx' },
-    callback = function(_)
-        if not require('inline-fold.module').isHidden then
-            vim.cmd('InlineFoldToggle')
-        end
-    end,
-})
+-- vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+--     pattern = { '*.html', '*.tsx' },
+--     callback = function(_)
+--         if not require('inline-fold.module').isHidden then
+--             vim.cmd('InlineFoldToggle')
+--         end
+--     end,
+-- })
 
 
 vim.diagnostic.config({
