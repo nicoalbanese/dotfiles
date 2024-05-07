@@ -2,7 +2,7 @@ return {
   {
     'nvim-tree/nvim-tree.lua',
     opts = {
-      view = { side = 'right', width = 40, relativenumber = true },
+      view = { side = 'right', width = 40, relativenumber = false },
       tab = { sync = { close = true } },
       renderer = { highlight_git = true },
       diagnostics = { enable = true },
