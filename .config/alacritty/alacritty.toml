@@ -5,10 +5,13 @@ TERM = "xterm-256color"
 # WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
-size = 15
+size = 18
+# offset.y = 8 
 
 [font.normal]
-family = "JetbrainsMono Nerd Font Mono"
+# family = "JetbrainsMono Nerd Font Mono"
+family = "MesloLGM Nerd Font Mono"
+# family = "Geist Mono"
 style = "Regular"
 
 
