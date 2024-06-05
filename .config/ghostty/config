@@ -3,7 +3,7 @@ title = ""
 font-family = "MesloLGM Nerd Font Mono"
 font-style = Regular
 
-adjust-cell-height = 2 
+adjust-cell-height = 4 
 
 window-padding-x = 8
 window-padding-y = 8

@@ -662,6 +662,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end
 })
 
+vim.filetype.add({
+    extension = {
+        mdx = "markdown",
+    }
+})
+
+vim.keymap.set("n", "<leader>f", "<cmd>:Format<CR>", { desc = "Format" })
 
 
 -- Customize underlines for warnings and errors

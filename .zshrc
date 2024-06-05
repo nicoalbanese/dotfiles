@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # Load zsh completion system
 autoload -Uz compinit
@@ -79,7 +79,6 @@ eval "`fnm env`"
 # Starship
 eval "$(starship init zsh)"
 
-zprof
 
 # pnpm
 export PNPM_HOME="/Users/nicoalbanese/Library/pnpm"
@@ -88,3 +87,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+# zprof
