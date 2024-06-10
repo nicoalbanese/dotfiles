@@ -59,6 +59,9 @@ function gca() {
   git add . && git commit -m '$@'
 }
 
+alias fzp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+
 export PATH=/opt/homebrew/bin:$PATH
 
 # bun completions

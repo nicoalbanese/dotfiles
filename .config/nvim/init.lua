@@ -124,6 +124,7 @@ require('lazy').setup({
         config = function()
             -- vim.cmd.colorscheme 'kanagawa-wave'
             vim.cmd.colorscheme 'vscode'
+            -- vim.cmd.colorscheme 'everforest'
         end,
     },
 
@@ -615,6 +616,10 @@ vim.keymap.set('i', '<M-Tab>', 'copilot#Accept("\\<CR>")', {
     replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+vim.g.copilot_enabled = false
+
+vim.keymap.set('n', '<leader>tcp', '<cmd>:Copilot enable<CR>', { desc = '[t]oggle [c]o[p]ilot' })
+
 
 -- vim.g.copilot_assume_mapped = true
 
@@ -669,6 +674,11 @@ vim.filetype.add({
 })
 
 vim.keymap.set("n", "<leader>f", "<cmd>:Format<CR>", { desc = "Format" })
+vim.keymap.set("n", "<leader>tsc", "<cmd>:setlocal spell spelllang=en_us<CR>", { desc = "[T]oggle [S]pell [C]heck" })
+vim.keymap.set("n", "<leader>twr", "<cmd>:set wrap! | :set linebreak!<CR>", { desc = "[T]oggle [W][R]ap" })
+
+vim.keymap.set("n", "<leader>h", "<cmd>cnext<CR>zz", { desc = "Forward qfixlist" })
+vim.keymap.set("n", "<leader>;", "<cmd>cprev<CR>zz", { desc = "Backward qfixlist" })
 
 
 -- Customize underlines for warnings and errors

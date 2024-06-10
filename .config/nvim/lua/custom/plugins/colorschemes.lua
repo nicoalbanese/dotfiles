@@ -23,13 +23,26 @@ return {
   },
   -- { 'projekt0n/github-nvim-theme' },
   {
+    "sainnhe/gruvbox-material",
+    config = function()
+      vim.g.gruvbox_material_background = 'hard'
+    end
+  },
+  {
+    "sainnhe/everforest",
+    config = function()
+      vim.g.everforest_background = 'hard'
+    end
+
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     opts = {
       contrast = "hard",
       bold = false,
       italic = {
         strings = false,
-        emphasis = true,
+        emphasis = false,
         comments = true,
         operators = false,
         folds = true,
