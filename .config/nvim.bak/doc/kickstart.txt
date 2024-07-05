@@ -21,4 +21,4 @@ It is:
       style and preferences. If you don't want to do that, there are probably
       other projects that would fit much better for you (and that's great!)!
 
- vim:tw=78:ts=8:ft=help:norl:
+ vim:tw=0:ts=2:ft=help:norl:

@@ -1,0 +1,73 @@
+[
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-s": [
+        "vim::PushOperator",
+        {
+          "AddSurrounds": {}
+        }
+      ]
+    }
+  },
+  {
+    // "context": "Dock || Editor && vim_mode == normal || ProjectPanel",
+    // the context that is for everything except vim visual mode: "Editor && vim_mode == normal && !VimWaiting && !menu" is not working. the solution si: "Editor && vim_mode == normal || Editor && vim_mode == visual && !VimWaiting && !menu || ProjectPanel || Dock". nope that's not working either. it doesnt run when there are no files open. the solution is: "Editor && vim_mode == normal || Editor && vim_mode == visual && !VimWaiting && !menu || ProjectPanel || Dock"
+    // this context should also **exclude** the terminal
+    // context:
+
+    "context": "EmptyPane || SharedScreen || vim_operator == none && !VimWaiting && vim_mode != insert || ProjectPanel",
+    "bindings": {
+      "space s f": "file_finder::Toggle",
+      "space s g": "workspace::NewSearch",
+      "space k m": "zed::OpenKeymap",
+      "space space": "tab_switcher::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPrevDiagnostic",
+      "space h p": "editor::ToggleHunkDiff",
+      "space h r": "editor::RevertSelectedHunks",
+      "g r": "editor::FindAllReferences",
+      "shift-k": "editor::Hover",
+      "space v": "editor::GoToDefinitionSplit",
+      "space f": "editor::Format",
+      "space r n": "editor::Rename",
+      "space q": "pane::CloseActiveItem",
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePrevItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "ctrl-d": ["workspace::SendKeystrokes", "9 j"],
+      "ctrl-u": ["workspace::SendKeystrokes", "9 k"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp"
+    }
+  }
+  // {
+  //   "context": "Dock",
+  //   "bindings": {
+  //     "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+  //     "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+  //     "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+  //     "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+  //   }
+  // }
+]

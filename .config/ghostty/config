@@ -1,13 +1,10 @@
-title = ""
-
 font-family = "MesloLGM Nerd Font Mono"
 font-style = Regular
 
-adjust-cell-height = 4 
+# adjust-cell-height = 4 
 
 window-padding-x = 8
 window-padding-y = 8
-
 
 # cursor-color = #4DAFE3
 # cursor-text = black

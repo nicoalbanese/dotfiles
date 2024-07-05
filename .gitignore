@@ -1,0 +1,8 @@
+.config/zed/conversations
+.config/zed/embeddings
+.config/zed/prompts
+.config/zed/.tmp*
+
+.config/ghostty/docs
+.DS_Store
+*/.DS_Store
